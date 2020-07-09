@@ -1,223 +1,159 @@
+<!-- Created by SOUMYA SAHU
 
+DATE : 08/07/20
+
+It's My first web code 🥳🤩
+
+UPVOTE👍🏻👍🏻 if you LIKE IT🥰😇😊
+
+Do give your SUGGESTIONS🙃
+
+Made with lot of efforts,don't copy.
+
+
+      ☆ Thanks a lot MIKHAIL for helping me to accomplish my goal.You helped me in each and every step and made me understand.☺️😇🤩
+      
+      ☆ Thanks a lot PRINCE for helping me to solve the problem for music.🥰🙃
+      
+      ☆ Thanks a lot NAMIT for helping me with fontstyle.😇🙃
+      
+-->
+
+<!DOCTYPE html>
 
 <html>
-
- 
-
-<!-- служебная часть -->
-
 <head>
-
- <!-- заголовок страницы -->
-
- <title>Password Generator</title>
-
- 
-
- <!-- настраиваем служебную информацию для браузеров -->
-
- <meta charset="utf-8">
-
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
- <meta name="viewport" content="width=device-width, initial-scale=1">
-
- 
-
- <!-- подключаем функцию, которая хеширует строку -->
-
- <script src="https://thecode.media/wp-content/uploads/2019/05/js-md5.js"></script>
-
- 
-
- <!-- задаём CSS-стили прямо здесь же, чтобы всё было в одном файле -->
-
- <style type="text/css">
-
- 
-
-   /*задаём общие параметры для всей страницы: шрифт и отступы*/
-
-   body{
-
-     text-align: center;
-
-     margin: 10;
-
-     font-family: Verdana, Arial, sans-serif;
-
-     font-size: 16px;
-
-   }
-
-   /* настраиваем внешний вид полей ввода*/
-
-   input{
-
-     display: inline-block;
-
-     margin: 20px auto;
-
-     border: 2px solid #000;
-
-     padding: 10px 20px;
-
-     font-family: Verdana, Arial, sans-serif;
-
-     font-size: 16px;
-
-   }
-
- 
-
- /*закончили со стилями*/
-
- </style>
-
- 
-
-<!-- закрываем служебную часть страницы -->
-
+    <title>BE MOTIVATED</title>
 </head>
-
- 
-
 <body>
+       <div id ="container1"></div>
+       <button id ="button1">&lt;&lt; PREV</button>
+       <button id ="button2">NEXT >></button>
+       <button id ="btn">MOTIVATIONAL QUOTES >></button>
+       <p id ="text">&copySOUMYA SAHU 2020</p>
+    <audio id="track" src="https://biffhard.sunproxy.net/file/c2hoRFZHSlFwQ00yMGNZRGt2ZWM2ZFJVclZ0VjdYNGZOdFNsMytsZHl2ZDFZNXJ2UTgzUUhHVWdpemlCaktBQi9HeS84eHA5ZEZuL0xjb3pvaE00Ym9QUmxEeWtweENUWlRXTVYzVmtZa1E9/Beautiful_Piano_Music_World_-_Special_Moments_Intimate_Love_(BiffHard.net).mp3" autoplay loop type="mpeg"></audio>   
+
+<script>
+
+var Quotes = [
+
+"Success is not final,\nFailure is not fatal:\nIt is the courage to continue that counts!\n\n- Winston Churchill -",
+
+"Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist;\nBe curious.\n\n- STEPHEN HAWKING -",
+
+"Opportunities don't happen. You create them.\n\n- Chris Grosser -",
+
+"T is a lesson you should heed,\ntry again.\nIf at first you don't succeed,\nTry, try again.\nThen your courage should appear,\nFor, if you will persevere,\nYou will conquer, never fear.\nTry, try again.\n- WILLIAM HICKSON -",
+
+"Things work out best for those who make the best of how things work out.\n\n- John Wooden -",
+
+"If people are doubting how far you can go, go so far that you can’t hear them anymore.\n\n- Michele Ruiz -",
+
+"There are two types of people who will tell you that you cannot make a difference in this world: those who are afraid to try and those who are afraid you will succeed.\n\n- Ray Goforth -",
+
+"The ones who are crazy enough to think they can change the world, are the ones that do.\n\n- Steve Jobs -",
+
+"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.\n\n- Helen Keller -",
+
+"Don’t be afraid to give up the good to go for the great.\n\n- John D. Rockefeller -",
+
+"Success seems to be connected with action.\nSuccessful people keep moving.\nThey make mistakes, but they don't quit.\n\n- Conrad Hilton -",
+
+"Don’t let yesterday take up too much of today.\n\n– Will Rogers -",
+
+ "Don't be distracted by criticism.\nRemember - the only taste of success some people get is to take a bite out of you.\n\n- Zig Ziglar -",
+
+"If you are working on something that you really care about, you don’t have to be pushed. The vision pulls you.\n\n– Steve Jobs -"
+
+];
+
+var screen = document.querySelector('#container1');
+
+var btn1 = document.querySelector('#button1');
+var btn2 = document.querySelector('#button2');
+var btn = document.querySelector('#btn');
+var activated = false;
+var i = 0;
+var music = document.querySelector('#track');
+
+screen.style.color = 'rgba(128,0,128,1)';
+screen.style.fontFamily  = 'cursive';
+screen.style.fontSize = '2.5em';
+screen.style.fontWeight = '900';
+screen.innerText = "Motivation is a food for brain.\n\nWorry Less , Smile More.🙃😇";
+
+function Change(){
+    screen.style.fontWeight = '500';
+    screen.style.fontSize = '2em';
+    screen.style.fontFamily  = 'Bangers';
+    screen.style.color = 'rgba(210,105,30,0)';
+    btn.style.display = 'none';
+    btn.style.animation = 'appear 2s linear forwards';
+    music.play();
+    document.querySelectorAll('body')[0].style.background = 'url(https://images.unsplash.com/photo-1519834785169-98be25ec3f84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80)';
+    document.querySelectorAll('body')[0].style.backgroundSize = 'cover';
+    screen.innerText = Quotes[0];
+    setTimeout(function(){
+        screen.style.animation = 'appear 2s linear forwards';
+        button1.style.display = 'inline-block';
+        button2.style.display = 'inline-block';
+        setTimeout(function(){
+            activated = true;
+        },2000)
+    },500);
+}
+
+btn.addEventListener('click', Change)
+
+function Next(){
+if (activated){
+    i += 1;
+    if (i==Quotes.length) {
+        i = 0;
+    }
+    screen.style.animation = 'none';
+    if (Quotes[i].length > 150){
+        screen.style.fontSize = '1.6em';
+    }
+    else {
+        screen.style.fontSize = '2em';
+    }
+    screen.innerText = Quotes[i];
+    setTimeout(function(){
+        screen.style.animation = 'appear 2s linear forwards';
+    },500);
+}
+}
+
+function Prev(){
+if (activated){
+    i -= 1;
+    if (i<0) {
+        i = Quotes.length-1;
+    }
+    screen.style.animation = 'none';
+    if (Quotes[i].length > 150){
+        screen.style.fontSize = '1.6em';
+    }
+    else {
+        screen.style.fontSize = '2em';
+    }
+    screen.innerText = Quotes[i];
+    setTimeout(function(){
+        screen.style.animation = 'appear 2s linear forwards';
+    },500);
+}
+}
+
+
+btn1.addEventListener('click', Prev);
+btn2.addEventListener('click', Next);
+
+</script>
 
- 
-
- <!-- началась визуальная часть -->
-
- <!-- ставим всё содержимое в один блок по центру  -->
-
- <div class="container"  margin: auto;">
-
- 
-
-   <!-- заголовок страницы -->
-
-   <h2 class="todo__caption">Password Generator</h2>
-
-   
-
-   <!--делаем отступ -->
-
-   <br>
-
- 
-
-   <!-- задаём поле ввода для адреса нужного сайта и настраиваем параметры поля -->
-
-   <input type="text" id="site_url" size="50" placeholder="Write website for password">
-
- 
-
-   <!--делаем отступ -->
-
-   <br>
-
- 
-
-   <!-- задаём поле ввода для кодового слова и настраиваем параметры поля -->
-
-   <input type="text" id="keyword" size="50" placeholder="Write codeword for make your pass stronger">
-
- 
-
-   <!--делаем двойной отступ -->
-
-   <br>
-
-   <br>
-
- 
-
-   <!-- вставляем кнопку, которая запускает генератор пароля и настраиваем отступы -->
-
-   <button style="font-size: 100%; padding:5px 10px 10px 10px" onclick="generate()">Create password</button>
-
- 
-
-   <!--выводим сгенерированный пароль -->
-
-   <p>Your password</p>
-
-   <div id = "pass_text" style="font-weight: bold"></div>  
-
-    
-
- </div>
-
- <!-- закончилась видимая часть -->
-
- 
-
- <!-- пишем скрипт, который будет генерировать пароль по нажатию кнопки -->
-
- <script>
-
-   
-
-   // задаём переменные, где будем хранить адрес сайта, кодовое слово…
-
-   var site, salt;
-
- 
-
-   // …исходные текстовые данные для пароля и сам пароль
-
-   var text, password;
-
- 
-
-   // объявляем функцию, которая создаёт пароль и выводит его на экран
-
-   function generate(){
-
- 
-
-     // кладём в соответствующие переменные текстовое значение адреса сайта…
-
-     site = document.getElementById('site_url').value;
-
- 
-
-     // …и кодового слова
-
-     salt = document.getElementById('keyword').value;
-
- 
-
-     // подготавливаем исходную строку для пароля и добавляем в неё наш секретный ингредиент
-
-     text = site + salt + 'Misha Polyanin molodets';
-
- 
-
-     // на основе этой строки с помощью функции md5, которую мы подключили в самом начале, создаём пароль
-
-     password = md5(text);
-
- 
-
-     // выводим его на экран
-
-     document.getElementById('pass_text').innerHTML=password;
-
- 
-
-   }
-
- 
-
- // закончилась скриптовая часть 
-
- </script>
 
 </body>
+</html>
 
-<!-- конец всей страницы -->
-
-</html> 
-
-
+</body>
+</html>
